@@ -1,5 +1,8 @@
-function modifyHTML(xhr){
-    document.getElementById("timestamp").innerHTML = xhr.responseText;
+function printHour(xhr){
+    let data = JSON.parse(xhr.responseText);
+    displayClock(data[1]);
+    document.getElementById("title").innerHTML = data[0];
+    document.getElementById("detail").innerHTML = "hours : "+data[1]['hours']+"<br>minutes : "+data[1]['minutes']+"<br>seconds : "+data[1]['seconds'];
 }
 
 function printError(xhr){
@@ -22,7 +25,7 @@ function printError(xhr){
     }
 }
 
-function ajaxRequest(type, url,callback){
+function ajaxRequest(type,url,callback){
     let xhr = new XMLHttpRequest();
     xhr.open(type,url);
     
@@ -40,7 +43,4 @@ function ajaxRequest(type, url,callback){
     xhr.send();
 }
 
-ajaxRequest("GET","http://localhost/ComWeb/TP3/timestamp.php",modifyHTML);
-var interval = setInterval(ajaxRequest,1000,"GET","http://localhost/ComWeb/TP3/timestamp.php",modifyHTML);
-
-
+var interval = setInterval(ajaxRequest,500,"GET","http://localhost/ComWeb/TP3/Ajax-JSON/time.php",printHour);
