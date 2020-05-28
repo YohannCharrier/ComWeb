@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>AJAX-JSON</title>
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha256-L/W5Wfqfa0sdBNIKN9cG6QA5F2qx4qICmU2VgLruv9Y=" crossorigin="anonymous">
+
+    <!-- JS Scripts -->
+    
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="container">
+      <br>
+      <h1>AJAX-JSON</h1>
+      <hr>
+    </header>
+    <div class="container">
+        <!-- Errors -->
+        <div class="row">
+            <section id="errors" class="container alert alert-danger" style="display: none">
+            </section>
+        </div>
+        <div class="row">
+            <p id="heure"></p>
+        </div>
+        <div class="row">
+            <button id="btn" type="button" class="btn btn-primary" style="display: inline-block">Afficher 3 étudiants</button>
+        </div>
+        <div class="row">
+            <table class="table" id="CIR1" style="display: none">
+                <thead>
+                    <tr>
+                      <th scope="col">Promo</th>
+                      <th scope="col">Login</th>
+                      <th scope="col">ID</th>
+                      <th scope="col">Note Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="etu1"></tr>
+                    <tr id="etu2"></tr>
+                    <tr id="etu3"></tr>
+                </tbody>
+            </table>
+            <table class="table" id="CIR2" style="display: none">
+                <thead>
+                    <tr>
+                      <th scope="col">Promo</th>
+                      <th scope="col">Login</th>
+                      <th scope="col">ID</th>
+                      <th scope="col">Note Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="etu4"></tr>
+                    <tr id="etu5"></tr>
+                    <tr id="etu6"></tr>
+                </tbody>
+                
+            </table>
+            <table class="table" id="CSI2" style="display: none">
+                <thead>
+                    <tr>
+                      <th scope="col">Promo</th>
+                      <th scope="col">Login</th>
+                      <th scope="col">ID</th>
+                      <th scope="col">Note Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="etu7"></tr>
+                    <tr id="etu8"></tr>
+                    <tr id="etu9"></tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    <script src="ajax.js"></script>
+  </body>
+</html>
